@@ -11,3 +11,18 @@
 <link href="{{ asset('template/backend/') }}/assets/css/sidebar-menu.css" rel="stylesheet" />
 <!-- Custom Style-->
 <link href="{{ asset('template/backend/') }}/assets/css/app-style.css" rel="stylesheet" />
+
+<!--Data Tables -->
+<link href="{{ asset('template/backend/') }}/assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css"
+    rel="stylesheet" type="text/css">
+<link href="{{ asset('template/backend/') }}/assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css"
+    rel="stylesheet" type="text/css">
+<style>
+    table,
+    tr,
+    td,
+    th {
+        text-align: center;
+    }
+
+</style>
