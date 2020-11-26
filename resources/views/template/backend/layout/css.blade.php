@@ -25,4 +25,32 @@
         text-align: center;
     }
 
+    .form-control-position {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+    }
+
+    .footer {
+        bottom: 0px;
+        color: #272727;
+        text-align: center;
+        padding: 12px 30px;
+        position: fixed;
+        right: 0;
+        left: 240px;
+        background-color: #f9f9f9;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }   
+
 </style>

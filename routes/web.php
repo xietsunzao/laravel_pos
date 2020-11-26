@@ -20,8 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/kategori', 'CategoryController@index');
+Route::get('/kategori', 'CategoryController@index')->name('kategori');
 Route::get('kategori/create', 'CategoryController@create')->name('kategori.create');
+Route::post('kategori/store', 'CategoryController@store')->name('kategori.store');
 Route::get('kategori/edit/{kategori}', 'CategoryController@edit')->name('kategori.edit');
-Route::PUT('kategori/kategori/{kategori}', 'CategoryController@Update')->name('kategori.update');
+Route::put('kategori/kategori/{kategori}', 'CategoryController@Update')->name('kategori.update');
 Route::get('kategori/delete/{kategori}', 'CategoryController@destroy')->name('kategori.delete');

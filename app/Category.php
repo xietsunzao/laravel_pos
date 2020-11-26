@@ -3,32 +3,26 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
 class Category extends Model
 {
 
-    protected $table="tb_kategori";
+    protected $table = "tb_kategori";
     protected $fillable = ['nama_kategori'];
+    protected $primaryKey = 'id_kategori';
 
-    public function parent()
+    public function getData()
     {
-        return $this->belongsTo(Category::class);
+        return $this->all();
     }
-    public function scopeGetParent($query)
+
+    public function insertData($data)
     {
-        return $query->whereNull('parent_id');
+        return $this->create($data);
     }
-    public function setSlugAttribute($value)
+
+    public function getRow($id)
     {
-        $this->attributes['slug'] = Str::slug($value);
-    }
-    public function getNameAttribute($value)
-    {
-        return ucfirst($value);
-    }
-    public function child()
-    {
-        return $this->hasMany(Category::class, 'parent_id');
+        return $this->find($id);
     }
 }

@@ -45,15 +45,15 @@
                                             <td>{{ $r->nama_kategori }}</td>
                                             <td>
                                                 <a href="{{ route('kategori.edit', $r->id_kategori) }}"
-                                                    class="btn btn-primary btn-round btn-md  shadow-primary waves-effect waves-light m-1">
+                                                    class="btn btn-primary btn-round btn-sm  shadow-primary waves-effect waves-light m-1">
                                                     <i class="fa fa-eye"></i> Detail
                                                 </a>
                                                 <a href="{{ route('kategori.edit', $r->id_kategori) }}"
-                                                    class="btn btn-warning btn-round btn-md  shadow-warning waves-effect waves-light m-1">
+                                                    class="btn btn-warning btn-round btn-sm  shadow-warning waves-effect waves-light m-1">
                                                     <i class="fa fa-edit"></i> Edit
                                                 </a>
                                                 <a href="{{ route('kategori.delete', $r->id_kategori) }}"
-                                                    class="btn btn-danger btn-round btn-md  shadow-danger waves-effect waves-light m-1">
+                                                    class="btn btn-danger btn-round btn-sm  shadow-danger waves-effect waves-light m-1">
                                                     <i class="fa fa-trash"></i> Hapus
                                                 </a>
                                             </td>
