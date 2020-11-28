@@ -19,7 +19,6 @@ class CategoryController extends Controller
         'success' => 'Data Kategori Berhasil Diubah!'
     ];
 
-
     public function __construct()
     {
         $this->kategori = new Category();
@@ -56,9 +55,36 @@ class CategoryController extends Controller
 
     public function edit($id = NULL)
     {
+        $getRow = $this->kategori->countData($id);
+        if ($getRow > 0) {
+            $data = [
+                'title' => "{$this->edit} {$this->title}",
+                'row' => $this->kategori->getRow($id),
+                'main' => $this->main
+            ];
+            return view('kategori.edit', $data);
+        } else {
+            return redirect(route('kategori'))->with($this->shin->notFound());
+        }
+    }
+
+    public function update(Request $post, $id)
+    {
         $data = [
-            'title' => "{$this->edit} {$this->title}",
-            'row' => $this->kategori->getRow($id)
+            'nama_kategori' => $post->kategori
         ];
+        $this->kategori->updateData($id, $data);
+        return redirect(route('kategori'))->with($this->shin->successEdit());
+    }
+
+    public function destroy($id)
+    {
+        $getRow = $this->kategori->countData($id);
+        if ($getRow > 0) {
+            $this->kategori->deleteData($id);
+            return redirect(route('kategori'))->with($this->shin->successDelete());
+        } else {
+            return redirect(route('kategori'))->with($this->shin->notFound());
+        }
     }
 }

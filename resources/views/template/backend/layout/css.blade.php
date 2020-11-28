@@ -17,6 +17,9 @@
     rel="stylesheet" type="text/css">
 <link href="{{ asset('template/backend/') }}/assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css"
     rel="stylesheet" type="text/css">
+
+<!--Sweet Alerts -->
+<link rel="stylesheet" href="{{ asset('template/backend/') }}/assets/plugins/sweetalert2/sweetalert2.min.css">
 <style>
     table,
     tr,
@@ -51,6 +54,10 @@
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
-    }   
+    }
+    .swal2-confirm {
+        display: inline-block;
+        margin: 5px;
+    }
 
 </style>

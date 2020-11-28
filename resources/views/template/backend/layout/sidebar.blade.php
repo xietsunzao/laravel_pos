@@ -12,11 +12,12 @@
                 <span>Dashboard</span></a>
         </li>
         <li>
-            <a href="index.html" class="waves-effect">
+            <a href="#" class="waves-effect">
                 <i class="fa fa-database"></i> <span>Master Data</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="sidebar-submenu">
-                <li><a href="{{ url('/kategori') }}"><i class="fa fa-circle-o"></i>Data Kategori</a></li>
+                <li><a href="{{ route('kategori') }}"><i class="fa fa-circle-o"></i>Data Kategori</a></li>
+                <li><a href="{{ route('produk') }}"><i class="fa fa-circle-o"></i>Data Produk</a></li>
             </ul>
         </li>
 

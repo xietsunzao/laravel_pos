@@ -21,8 +21,23 @@ class Category extends Model
         return $this->create($data);
     }
 
+    public function updateData($id, $data)
+    {
+        return $this->where($this->primaryKey, $id)->update($data);
+    }
+
+    public function deleteData($id)
+    {
+        return $this->find($id)->delete();
+    }
+
     public function getRow($id)
     {
         return $this->find($id);
+    }
+
+    public function countData($id)
+    {
+        return $this->where($this->primaryKey, $id)->count();
     }
 }
