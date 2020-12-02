@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Providers\ShinServiceProvider as Shin;
 use App\Category as Category;
-
+// halo test ini testing saja
 class CategoryController extends Controller
 {
     public $title = 'Data Kategori';
