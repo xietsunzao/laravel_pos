@@ -11,13 +11,7 @@ class CategoryController extends Controller
     public $title = 'Data Kategori';
     protected $add = 'Tambah';
     protected $edit = 'Edit';
-    protected $main = 'kategori';
-    protected $successAdd = [
-        'success' => 'Data Kategori Berhasil Ditambahkan!'
-    ];
-    protected $successEdit = [
-        'success' => 'Data Kategori Berhasil Diubah!'
-    ];
+    protected $main = 'Kategori';
 
     public function __construct()
     {
@@ -46,6 +40,7 @@ class CategoryController extends Controller
 
     public function store(Request $post)
     {
+
         $data = [
             'nama_kategori' => $post->kategori
         ];

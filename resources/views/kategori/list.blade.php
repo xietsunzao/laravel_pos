@@ -23,7 +23,7 @@
                         <div class="float-right">
                             <a class="btn btn-success shadow-success waves-effect waves-light m-1"
                                 href="{{ url('kategori/create') }}">
-                                <i class="fa fa-plus"></i> Tambah Data Kategori
+                                <i class="fa fa-plus"></i> Tambah {{ $title }}
                             </a>
                         </div>
                     </div>

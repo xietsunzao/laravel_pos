@@ -27,9 +27,9 @@ Route::get('kategori/edit/{kategori}', 'CategoryController@edit')->name('kategor
 Route::put('kategori/kategori/{kategori}', 'CategoryController@Update')->name('kategori.update');
 Route::get('kategori/delete/{kategori}', 'CategoryController@destroy')->name('kategori.delete');
 
-Route::get('/produk', 'CategoryController@index')->name('produk');
-Route::get('produk/create', 'CategoryController@create')->name('produk.create');
-Route::post('produk/store', 'CategoryController@store')->name('produk.store');
-Route::get('produk/edit/{produk}', 'CategoryController@edit')->name('produk.edit');
-Route::put('produk/produk/{produk}', 'CategoryController@Update')->name('produk.update');
-Route::get('produk/delete/{produk}', 'CategoryController@destroy')->name('produk.delete');
+Route::get('produk', 'ProdukController@index')->name('produk');
+Route::get('produk/create', 'ProdukController@create')->name('produk.create');
+Route::post('produk/store', 'ProdukController@store')->name('produk.store');
+Route::get('produk/edit/{produk}', 'ProdukController@edit')->name('produk.edit');
+Route::put('produk/produk/{produk}', 'ProdukController@Update')->name('produk.update');
+Route::get('produk/delete/{produk}', 'ProdukController@destroy')->name('produk.delete');
