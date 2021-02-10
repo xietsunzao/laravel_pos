@@ -12,7 +12,6 @@
                         <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                     </ol>
                 </div>
-
             </div>
             <!-- End Breadcrumb-->
             <div class="row">
